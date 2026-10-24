@@ -1,0 +1,6 @@
+streamlit>=1.37.0
+ultralytics==8.0.197
+opencv-contrib-python==4.9.0.80
+numpy==1.26.4
+pandas>=2.0
+Pillow>=10.0

@@ -1,0 +1,25 @@
+﻿# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Secrets
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Private face data and generated logs, at any depth
+**/known_faces/
+**/unknown_faces/
+**/unknown_log.csv
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

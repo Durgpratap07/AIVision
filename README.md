@@ -40,30 +40,60 @@ A Python-based real-time object and face recognition system using the **YOLOv8**
 - ├── yolo-Weights/
 - │ └── yolov8n.pt # YOLOv8 model file
 - └── README.md
-
 ## 💾 Installation
 
-1. **Clone the repository**
-     ```bash
-     git clone https://github.com/your-username/your-repo-name.git
-     cd your-repo-name
-2. **Set up a virtual environment**
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows: venv\Scripts\activate
-3. **Install dependencies**
-   ```bash
-    pip install -r requirements.txt
-4. **Download YOLOv8n weights**
-     ```bash
-     Place yolov8n.pt inside yolo-Weights/. You can get it from here.
-5. **Run the detection script**
-   ```bash
-   python detect.py
-   
-📸 Sample Output
-<img width="1200" height="560" alt="Screenshot 2025-07-13 165849" src="https://github.com/user-attachments/assets/6d2caf7a-19d8-43ba-9af3-b838961c5734" />
+### 1. Clone the repository
 
+```bash
+git clone https://github.com/Durgpratap07/AIVision.git
+cd AIVision
+```
+
+### 2. Create a virtual environment
+
+**Windows (PowerShell):**
+
+```powershell
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+```
+
+If PowerShell blocks activation, use the environment's Python executable directly in the next steps.
+
+### 3. Install dependencies
+
+```powershell
+python -m pip install --upgrade pip
+python -m pip install -r VisionAI_Dashboard/requirements-dashboard.txt
+```
+
+### 4. Verify the model files
+
+Ensure the following files are present in `VisionAI_Dashboard/`:
+
+- `yolov8n.pt` — YOLOv8 object detection model
+- `models/face_detection_yunet_2023mar.onnx` — YuNet face detection model
+- `models/face_recognition_sface_2021dec.onnx` — SFace face recognition model
+
+These model files are included in the repository, so you should not need to download them separately.
+
+### 5. Launch the VisionAI dashboard
+
+```powershell
+cd VisionAI_Dashboard
+python -m streamlit run app.py
+```
+
+Streamlit will provide a local URL, usually `http://localhost:8501`. Open it in your browser to use the dashboard.
+
+### ⚠️ Notes
+
+- Run the commands from the repository's root directory unless the instructions specify otherwise.
+- Keep personal face images, generated logs, and secret configuration files out of Git.
+- If a dependency installation fails, check the error message and your Python version before changing package versions.
+ ## 📸 Dashboard Preview
+
+![VisionAI Dashboard](assets/dashboard.png)
 🛠️ Future Improvements
 
  Sound alert on unknown detection (optional)
@@ -78,9 +108,7 @@ A Python-based real-time object and face recognition system using the **YOLOv8**
 
 👤 Author
 
-Sai Vinod
+DURG PRATAP SINGH
+durgpratap07
+
 - Feel free to connect or reach out on GitHub for collaborations or questions!
-
-📄 License
-
-This project is licensed under the MIT License.
